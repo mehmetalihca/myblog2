@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Mehmet Ali</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-en.html">Home</a></li>
+          <li><a href="about-en.html">About</a></li>
+          <li><a href="projects-en.html" class="active">Projects</a></li>
+          <li><a href="university-en.html">University Life</a></li>
+          <li><a href="erasmus-en.html">Erasmus</a></li>
+          <li><a href="contact-en.html">Contact</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="projects-tr.html">TR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>My Projects</h2>
+      <p>Here are some of the projects I’ve developed throughout my academic and personal journey.</p>
+
+      <div class="project">
+        <h3>🛠️ Network Toolkit GUI</h3>
+        <p>A modular toolkit with port scanning, device discovery, real-time messaging — all wrapped in a professional graphical interface.</p>
+      </div>
+
+      <div class="project">
+        <h3>💬 Web-Based Chat App</h3>
+        <p>A real-time chat system using WebSocket. It supports private messaging, responsive UI, and light/dark theme toggle.</p>
+      </div>
+
+      <div class="project">
+        <h3>📊 Social Media Sentiment Analysis</h3>
+        <p>Analyzing comments from Twitter, Instagram, and Reddit using NLP techniques and classification models.</p>
+      </div>
+
+      <div class="project">
+        <h3>🌍 Erasmus Photo Gallery</h3>
+        <p>A portfolio web page to showcase my Erasmus journey with journals and photo memories from different European cities.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

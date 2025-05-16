@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Mehmet Ali's Blog</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-en.html" class="active">Home</a></li>
+          <li><a href="about-en.html">About</a></li>
+          <li><a href="projects-en.html">Projects</a></li>
+          <li><a href="university-en.html">University Life</a></li>
+          <li><a href="erasmus-en.html">Erasmus</a></li>
+          <li><a href="contact-en.html">Contact</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="index-tr.html">TR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <img src="images/profile.jpg" alt="Mehmet Ali" class="profile-pic" />
+      <h2>Welcome to My Blog</h2>
+      <p>
+        I'm Mehmet Ali — a Computer and Industrial Engineering student passionate about tech, travel, and learning.
+        <br>
+        Explore my academic journey, personal experiences, and technical projects.
+      </p>
+      <a href="about-en.html" class="btn">Learn More About Me →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+
+</body>
+</html>

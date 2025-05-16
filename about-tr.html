@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakkımda | Mehmet Ali</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-tr.html">Ana Sayfa</a></li>
+          <li><a href="about-tr.html" class="active">Hakkımda</a></li>
+          <li><a href="projects-tr.html">Projeler</a></li>
+          <li><a href="university-tr.html">Üniversite</a></li>
+          <li><a href="erasmus-tr.html">Erasmus</a></li>
+          <li><a href="contact-tr.html">İletişim</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="about-en.html">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Ben Kimim?</h2>
+      <p>Merhaba! Ben <strong>Mehmet Ali</strong>. Bilgisayar Mühendisliği ve Endüstri Mühendisliği öğrencisiyim. Bu iki alandaki eğitimim bana hem teknik hem de sistematik düşünme becerisi kazandırdı.</p>
+
+      <p>Hatay doğumluyum. Çocukluğumdan beri meraklı bir yapım vardı; bu merak beni mühendisliğe yönlendirdi. Üniversite yıllarımda işlevsel ve etkili projeler geliştirmeye başladım. Ağ programlama araçlarından web tabanlı sohbet sistemlerine, veri analizi projelerinden yapay zeka uygulamalarına kadar çeşitli alanlarda üretken oldum.</p>
+
+      <p>Teknoloji dışında yazı yazmayı, seyahat etmeyi ve öğrendiklerimi paylaşmayı çok severim. Bu blog da tam olarak bu tutkularımın birleştiği bir alan. Eğitim hayatım, projelerim ve Erasmus sürecim gibi deneyimlerimi burada paylaşmaktan mutluluk duyuyorum.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

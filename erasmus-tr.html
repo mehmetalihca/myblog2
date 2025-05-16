@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erasmus ve Avrupa Gezisi | Mehmet Ali</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-tr.html">Ana Sayfa</a></li>
+          <li><a href="about-tr.html">Hakkımda</a></li>
+          <li><a href="projects-tr.html">Projeler</a></li>
+          <li><a href="university-tr.html">Üniversite</a></li>
+          <li><a href="erasmus-tr.html" class="active">Erasmus</a></li>
+          <li><a href="contact-tr.html">İletişim</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="erasmus-en.html">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>İspanya'daki Erasmus Deneyimim</h2>
+      <p>2024 yılında <strong>Erasmus+</strong> programıyla İspanya'da eğitim görme fırsatı buldum. Bu deneyim bana hem kişisel hem de akademik olarak çok şey kattı.</p>
+
+      <p>İspanya'daki bir üniversitede eğitim aldım ve Avrupa'nın dört bir yanından gelen öğrencilerle tanıştım. Dersler ilgi çekiciydi, kültürel deneyim ise eşsizdi.</p>
+
+      <h3>Avrupa Turu</h3>
+      <p>Erasmus dönemimde birçok Avrupa şehrini gezme fırsatım oldu. İşte bazı unutulmaz duraklar:</p>
+      <ul>
+        <li><strong>Barcelona</strong> – Gaudí eserleri, Akdeniz sahili ve canlı sokak hayatı.</li>
+        <li><strong>Amsterdam</strong> – Kanallar, bisikletler ve Van Gogh Müzesi.</li>
+        <li><strong>Paris</strong> – Eyfel, Louvre ve gece ışıkları.</li>
+        <li><strong>Roma</strong> – Antik kalıntılar, Kolezyum ve tabii ki dondurma!</li>
+      </ul>
+
+      <p>İşte yolculuğumdan bazı favori fotoğraflarım:</p>
+      <div class="gallery">
+        <img src="images/barcelona.jpg" alt="Barcelona">
+        <img src="images/amsterdam.jpg" alt="Amsterdam">
+        <img src="images/paris.jpg" alt="Paris">
+        <img src="images/rome.jpg" alt="Roma">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

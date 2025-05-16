@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erasmus & Europe Trip | Mehmet Ali</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-en.html">Home</a></li>
+          <li><a href="about-en.html">About</a></li>
+          <li><a href="projects-en.html">Projects</a></li>
+          <li><a href="university-en.html">University Life</a></li>
+          <li><a href="erasmus-en.html" class="active">Erasmus</a></li>
+          <li><a href="contact-en.html">Contact</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="erasmus-tr.html">TR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>My Erasmus Experience in Spain</h2>
+      <p>In 2024, I had the incredible opportunity to study in <strong>Spain</strong> through the Erasmus+ program. Living abroad expanded my horizons and allowed me to grow both personally and academically.</p>
+
+      <p>I studied at a university in Spain where I met students from all over Europe. The lectures were engaging, and the cultural experience was unforgettable.</p>
+
+      <h3>Exploring Europe</h3>
+      <p>During my Erasmus, I traveled to many European cities and captured memories through photos and journals. Here are some of the highlights:</p>
+      <ul>
+        <li><strong>Barcelona</strong> – Gaudí's art, the Mediterranean coast, and vibrant street life.</li>
+        <li><strong>Amsterdam</strong> – Canals, bicycles, and the Van Gogh Museum.</li>
+        <li><strong>Paris</strong> – Eiffel Tower, the Louvre, and magical night lights.</li>
+        <li><strong>Rome</strong> – Ancient ruins, the Colosseum, and of course, gelato!</li>
+      </ul>
+
+      <p>Here are some of my favorite photos from the journey:</p>
+      <div class="gallery">
+        <img src="images/barcelona.jpg" alt="Barcelona">
+        <img src="images/amsterdam.jpg" alt="Amsterdam">
+        <img src="images/paris.jpg" alt="Paris">
+        <img src="images/rome.jpg" alt="Rome">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

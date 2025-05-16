@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Life | Mehmet Ali</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-en.html">Home</a></li>
+          <li><a href="about-en.html">About</a></li>
+          <li><a href="projects-en.html">Projects</a></li>
+          <li><a href="university-en.html" class="active">University Life</a></li>
+          <li><a href="erasmus-en.html">Erasmus</a></li>
+          <li><a href="contact-en.html">Contact</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="university-tr.html">TR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>My University Life</h2>
+      <p>Pursuing both <strong>Computer Engineering</strong> and <strong>Industrial Engineering</strong> has shaped me into a problem-solver who bridges technical precision with systemic thinking. It’s been an intense but rewarding journey of time management and interdisciplinary creativity.</p>
+
+      <p>I have participated in student clubs, presented in conferences, and collaborated on real-world projects. These experiences improved my communication skills and deepened my passion for learning by doing.</p>
+
+      <p>I also had the opportunity to co-host a university podcast where I discussed the ups and downs of being a double-major student, hoping to inspire others.</p>
+
+      <p>Check out the <a href="projects-en.html">Projects</a> page to see what I’ve built during this exciting chapter!</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

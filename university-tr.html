@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Üniversite Hayatım | Mehmet Ali</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-tr.html">Ana Sayfa</a></li>
+          <li><a href="about-tr.html">Hakkımda</a></li>
+          <li><a href="projects-tr.html">Projeler</a></li>
+          <li><a href="university-tr.html" class="active">Üniversite</a></li>
+          <li><a href="erasmus-tr.html">Erasmus</a></li>
+          <li><a href="contact-tr.html">İletişim</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="university-en.html">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Üniversite Hayatım</h2>
+      <p><strong>Bilgisayar Mühendisliği</strong> ve <strong>Endüstri Mühendisliği</strong> bölümlerini aynı anda okumak bana teknik bilgiyle birlikte sistematik düşünme yeteneği kazandırdı. Zorlu ama geliştirici bir süreçti.</p>
+
+      <p>Öğrenci kulüplerinde aktif rol aldım, konferanslara katıldım ve birçok gerçek dünya projesinde çalıştım. Bu deneyimler iletişim becerilerimi artırdı ve "yaparak öğrenme" tutkumun temelini oluşturdu.</p>
+
+      <p>Ayrıca, üniversite podcast programında çift anadal öğrencisi olmanın avantajlarını ve zorluklarını anlattığım bölümlerde yer aldım.</p>
+
+      <p>Bu süreçte geliştirdiğim projeleri görmek için <a href="projects-tr.html">Projeler</a> sayfasına göz atabilirsin.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
