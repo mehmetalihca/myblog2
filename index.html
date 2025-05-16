@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Sayfa | Mehmet Ali'nin Blogu</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mehmet Ali</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-tr.html" class="active">Ana Sayfa</a></li>
+          <li><a href="about-tr.html">Hakkımda</a></li>
+          <li><a href="projects-tr.html">Projeler</a></li>
+          <li><a href="university-tr.html">Üniversite</a></li>
+          <li><a href="erasmus-tr.html">Erasmus</a></li>
+          <li><a href="contact-tr.html">İletişim</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+          <li><a href="index-en.html">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <img src="images/profile.jpg" alt="Mehmet Ali" class="profile-pic" />
+      <h2>Kişisel Bloguma Hoş Geldiniz</h2>
+      <p>
+        Ben Mehmet Ali — Bilgisayar ve Endüstri Mühendisliği öğrencisiyim. Teknoloji, seyahat ve öğrenmeye tutkuyla bağlıyım.
+        <br>
+        Akademik yolculuğumu, kişisel deneyimlerimi ve projelerimi burada paylaşıyorum.
+      </p>
+      <a href="about-tr.html" class="btn">Benim Hakkımda Daha Fazlası →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mehmet Ali. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+
+    // Sayfa yüklendiğinde localStorage kontrol et
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Kullanıcının seçimini kaydet
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
